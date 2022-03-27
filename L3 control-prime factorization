@@ -1,1 +1,25 @@
+def prime_factors(n):
+"""Print the prime factors of n in non-decreaing order.
+>>> prime_factors(8)
+2
+2
+2
+>>> prime_factors(9)
+3
+3
+>>> prime_factors(11)
+11
+"""
 
+    while n > 1:
+        k = smallest_prime_factor(n)   //it is easier to read if we have 2 functions, one to find smallest prime factor and the other print prime factors.
+        n = n//k
+        print(k)
+
+def smallest_prime_factor(n):
+    """find the smallest prime factor, which is just the smallest factor of n"""
+    k = 2
+    while n % k != 0:
+        k = k+1
+    return k       //print k when n % k = 0 for the first time.
+        
