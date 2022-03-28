@@ -1,0 +1,19 @@
+
+def search(f): 
+"""brute force search """
+    x = 0
+    while True:
+        if f(x):
+            return x
+        x += 1
+
+def square(x):
+    return x * x
+    
+def inverse(f):
+    """ return g(y) that g(f(x)) = x """
+    return lambda y:search(lambda x: f(x) == y)
+    """for y, search for x for f(x) == y, so the function can find  the answer for reverse of f(x)"""
+sqrt = inverse(square)
+
+print(sqrt(16))
