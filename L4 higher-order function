@@ -1,0 +1,47 @@
+"""this is the thinking process of how to generalize the functions"""
+1) write out all the functions
+2. find common pattern
+3. abstract the common pattern and formulate individual pattern"""
+
+
+def sum_naturals(n):
+        """ sum of first n nature numbers"""
+        total = 0
+        i = 1
+        while i <= n:
+            total += i
+            i = i + 1
+        return total
+
+def sum_squares(n):
+    """sum of first n squares"""
+    total = 0
+    i = 1
+    while i <=n:
+        total += i**
+        i = i + 1 
+    return total
+
+"""DRY method"""
+
+def summation(n, term):               //term is a function here
+    """sum the first n terms of summation
+    >>> summation(5, cube)
+    225
+    """
+    total = 0
+    i = 1
+    while i <= n:
+        total = total + term(i)
+        i = i + 1
+    return total
+
+def identity(n) :
+  return n;
+
+def cube(n):
+  return pow(n, 3)
+    
+
+
+        
