@@ -1,9 +1,9 @@
 def fib (n):
     """compute fibonacci for N >= 1"""
-    prev = 0, curr = 1
-    k = 1
+    prev = 0, curr = 0                         // curr = 0 for fib(0)
+    k = 0
     while k < n:
-        prev, curr = curr, prev + curr
+        prev, curr = curr, prev + curr              
         k = k + 1
     return curr
     
